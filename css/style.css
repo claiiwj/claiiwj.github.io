@@ -1,0 +1,36 @@
+.cube {
+  width: 105px;
+  height: 105px;
+  background-color: rgb(106, 194, 194);
+}
+/*
+css寫動畫 跟ae邏輯相通
+固定語法
+1.@keyframes+動畫名字（好辨識也好管理得名字）
+2.一定要有大括號{}
+3.大括號裡就是動畫得時間點，
+    3-1時間點可以用 from{}->從一開始到最後完成的狀態
+    3-2時間點可以用百分比 0-100%
+        0%{狀態一}
+        20%{狀態二}
+        50%{狀態三}
+        70%{狀態四}
+        100%{狀態五}
+4.去w3s看看有哪些狀態可以用 vscode只要輸入transform就會提示可變形的效果
+*/
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/*寫完動畫後想用動畫的物件必須多寫
+animation: 動畫名稱 秒數;
+*/
+.cube {
+  animation: rotate 2s linear infinite;
+  animation-delay: 1s;
+}
